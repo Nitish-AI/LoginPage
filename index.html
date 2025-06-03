@@ -12,11 +12,28 @@
       body {
         margin: 0;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f1f3f6;
+        height: 100vh;
+      }
+
+      .login-wrapper {
+        width: 800px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
       }
 
       .left-panel {
         background-color: #2874f0;
         color: white;
+        padding: 40px;
+        height: 100%;
       }
 
       .left-panel h2 {
@@ -29,8 +46,12 @@
 
       .left-panel img {
         width: 100%;
-        max-width: 300px;
-        margin-top: 20px;
+        max-width: 250px;
+        margin-top: 40px;
+      }
+
+      .form-container {
+        padding: 40px;
       }
 
       .position-relative .small {
@@ -39,70 +60,67 @@
     </style>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row vh-100">
-        <!-- Left Side -->
-        <div
-          class="col-md-5 d-none d-md-flex flex-column justify-content-center align-items-center text-white left-panel"
-        >
-          <div class="text-start px-4">
-            <h2 class="">Login</h2>
-            <p>
-              Get access to your<br />
-              Orders, Wishlist and Recommendations
-            </p>
-            <img src="logo.png" alt="logo" />
-          </div>
+    <div class="login-wrapper d-flex">
+      <!-- Left Side -->
+      <div
+        class="col-md-5 left-panel d-flex flex-column justify-content-center"
+      >
+        <div>
+          <h2>Login</h2>
+          <p>Get access to your<br />Orders, Wishlist and Recommendations</p>
+          <img src="logo.png" alt="logo" />
         </div>
+      </div>
 
-        <!-- Right Side -->
-        <div class="col-md-7 d-flex align-items-center justify-content-center">
-          <div class="w-75">
-            <form>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter Email/Mobile number"
-                  required
-                />
-              </div>
-              <div class="mb-3 position-relative">
-                <input
-                  type="password"
-                  class="form-control"
-                  placeholder="Enter Password"
-                  required
-                />
-                <a
-                  href="#"
-                  class="position-absolute top-0 end-0 mt-2 me-2 small"
-                  >Forgot?</a
-                >
-              </div>
-              <p class="small text-muted">
-                By continuing, you agree to Flipkart's
-                <a href="#" class="text-decoration-none">Terms of Use</a> and
-                <a href="#" class="text-decoration-none">Privacy Policy</a>.
-              </p>
-              <button
-                type="submit"
-                class="btn w-100 text-white fw-bold"
-                style="background-color: #fb641b"
+      <!-- Right Side -->
+      <div class="col-md-7 d-flex align-items-center">
+        <div class="form-container w-100">
+          <form>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Email/Mobile number"
+                required
+              />
+            </div>
+            <div class="mb-3 position-relative">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="Enter Password"
+                required
+              />
+              <a href="#" class="position-absolute top-0 end-0 mt-2 me-2 small"
+                >Forgot?</a
               >
-                Login
-              </button>
-              <div class="text-center my-3">OR</div>
-              <button type="button" class="btn btn-outline-secondary w-100">
-                Request OTP
-              </button>
-              <div class="text-center mt-3">
-                <a href="#" class="text-primary text-decoration-none"
-                  >New to Flipkart? Create an account</a
-                >
-              </div>
-            </form>
-          </div>
+            </div>
+            <p class="small text-muted">
+              By continuing, you agree to Flipkart's
+              <a href="#" class="text-decoration-none">Terms of Use</a> and
+              <a href="#" class="text-decoration-none">Privacy Policy</a>.
+            </p>
+            <button
+              type="submit"
+              class="btn w-100 text-white fw-bold"
+              style="background-color: #fb641b"
+            >
+              Login
+            </button>
+            <div class="text-center my-3">OR</div>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-100"
+              style="color: #2874f0"
+            >
+              Request OTP
+            </button>
+            <div class="text-center mt-3">
+              <a href="#" class="text-primary text-decoration-none"
+                >New to Flipkart? Create an account</a
+              >
+            </div>
+          </form>
         </div>
       </div>
     </div>
