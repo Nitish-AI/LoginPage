@@ -56,6 +56,10 @@
       .position-relative .small {
         text-decoration: none;
       }
+      input:focus {
+        box-shadow: none !important;
+        outline: none;
+      }
     </style>
   </head>
   <body>
@@ -65,9 +69,14 @@
         class="col-md-5 left-panel d-flex flex-column justify-content-center"
       >
         <div>
-          <h2>Login</h2>
-          <p>Get access to your<br />Orders, Wishlist and Recommendations</p>
-          <img src="logo.png" alt="logo" />
+          <div class="mt-1" style="background-repeat: no-repeat">
+            <h2>Login</h2>
+            <p style="color: #dbdbdb">
+              Get access to your Orders, Wishlist and Recommendations
+            </p>
+          </div>
+
+          <div class="mt-5"><img src="logo.png" alt="logo" /></div>
         </div>
       </div>
 
@@ -78,7 +87,7 @@
             <div class="mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control rounded-0 border-0 border-bottom"
                 placeholder="Enter Email/Mobile number"
                 required
               />
@@ -86,7 +95,7 @@
             <div class="mb-3 position-relative">
               <input
                 type="password"
-                class="form-control"
+                class="form-control rounded-0 border-0 border-bottom"
                 placeholder="Enter Password"
                 required
               />
@@ -96,12 +105,12 @@
             </div>
             <p class="small text-muted">
               By continuing, you agree to Flipkart's
-              <a href="#" class="text-decoration-none">Terms of Use</a> and
-              <a href="#" class="text-decoration-none">Privacy Policy</a>.
+              <a href="#" class="text-decoration-none">Terms of Use</a>
+              and <a href="#" class="text-decoration-none">Privacy Policy</a>.
             </p>
             <button
               type="submit"
-              class="btn w-100 text-white fw-bold"
+              class="btn w-100 text-white rounded-0 border-0"
               style="background-color: #fb641b"
             >
               Login
@@ -109,8 +118,8 @@
             <div class="text-center my-3">OR</div>
             <button
               type="button"
-              class="btn btn-outline-secondary w-100"
-              style="color: #2874f0"
+              class="btn w-100 rounded-0"
+              style="color: #2874f0; border: 2px solid #dedede"
             >
               Request OTP
             </button>
